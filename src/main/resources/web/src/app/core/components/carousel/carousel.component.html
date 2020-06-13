@@ -1,0 +1,35 @@
+<p-carousel [value]="productList" [numVisible]="1" [numScroll]="1" [circular]="true"
+    [responsiveOptions]="responsiveOptions">
+    <p-header>
+        <div class="example-label wrapper" style="margin-top: 10px;">
+            <h1>Our Collection</h1>
+        </div>
+        <!--  -->
+    </p-header>
+    <ng-template let-shoe pTemplate="item">
+        <div class="car-details">
+            <div class="p-grid p-nogutter">
+                <div class="p-col-12">
+                    <img [src]="shoe.src" style="max-width: 75%!important;margin-left: 12.5%;" />
+                </div>
+                <div class="p-col-12">
+                    <section>
+                        <div class="example-label wrapper">{{shoe.name}}</div>
+                        <br>
+                        <div class="example-button-row">
+                            <div class="example-flex-container">
+                                <div class="example-button-container wrapper">
+                                    <!-- <button mat-mini-fab style="button" color="primary" 
+                                        aria-label="Example icon button with a menu icon">
+                                        <mat-icon>menu</mat-icon>
+                                    </button> -->
+                                    <button mat-raised-button enquiry color="accent"  [routerLink]="['enquiry']">Enquiry</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
